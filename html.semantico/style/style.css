@@ -1,0 +1,141 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: Verdana;
+}
+
+.contner-principal {
+    padding: 1rem;
+    background-color: dimgray;
+}
+
+.cabecalio {
+    background-color: darkgray;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    color: aliceblue;
+    padding: 1rem;
+}
+
+.conteudo-principal {
+    background-color: darkgray;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: calc(100% - 2rem);
+    gap: 1rem;
+    display: flex;
+    margin: 1rem 0 1rem 0;
+}
+
+.menu-navegacao, .anuncio {
+    text-align: center;
+    background-color: gray;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.sessao-principal{
+    width: 70%;
+    background-color: gray;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-div {
+    background-color: slategray;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+}
+
+.article-1, .article-2 {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: lightsteelblue;
+}
+
+.article-1 {
+    height: 250px;
+}
+
+
+.article-2 {
+    height: 150px;
+}
+
+.image { 
+    width: calc(100% - 0.125rem);
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.figura{
+    background-color: slategray;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.texte-vertical{
+    writing-mode: vertical-rl;
+}
+.rodape{
+    background-color: darkgrey;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    color: aliceblue;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/* ------------------------------------------------------- */
+
+.exercicio-1{
+    color: #ffc0cb;
+    width: 1.5rem;
+}
+
+.color{
+    color: #89F336;
+}
+
+.descricao{
+    font-size: 1rem;
+    color: #FB6445;
+    text-align: center;
+}
+
+.marcacao{
+    margin: rgb(177, 66, 177);
+}
+
+.tamanho{
+    font-size: 0.75remm;
+}   
+
+.article-3{
+    border: 2px dashed#2089a2;
+           height: 240px;
+           background-color: #1F4277; 
+        }

@@ -1,0 +1,86 @@
+/* 0 (*) Aplica estilo para todu o site */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/*A teg <body> aplica estilo para todos os elementos do site*/
+body {
+    background-color: #f4e5ec;
+}
+
+.hero-section {
+    display: flex
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+
+}
+.sobre {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff5f5;
+    border-radius: 24px;
+    padding: 25px;
+
+}
+
+.sobre h1{
+    font-size: 64px;
+    font-weight: 600;
+    color: #aa2b69;
+    font: impact,'Arial narrow Bold';
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+.sobre p{
+    font-size: 34px;
+    color: #710126;
+    font-family: 'Arial narrow Bold';
+    margin: 24px 10px;
+}
+
+sobre h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: #710124;
+    font: impact,'Arial narrow Bold';
+    margin: 0 10px;
+    margin-bottom: 15px;
+
+}
+
+.sober ul{
+   margin: 0 10px; 
+}
+
+.sobre ul li{
+   margin: 15px 50px;
+   list-style: circle;
+   color: #710124;
+   font-size: 24px; 
+   font-family: 'Arial narrow bold';
+}
+
+.foto{
+    width: 80%;
+    margin: 50px auto;
+    padding: 25px;
+}
+
+.foto figure img{
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+    .foto figure figcaption{
+        font-style: 16px;
+        color: #710124;
+        text-align: center;
+        font-family: 'Arial nerrow bold';
+    }
