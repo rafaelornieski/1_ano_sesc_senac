@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-
 <!--O body contém todo o conteúdo visivel da página-->
 <body>
     
@@ -64,12 +63,43 @@
         PARTE 1 — PROPRIEDADES DO FLEX CONTAITER
         São aplicadas ao elimento pai, responsavel por organisar os itens 
     =================================================== -->
-    <header class="group-heder">
+    <header class="group-header">
         <span>Parte 1</span>
         <h2>Propriedades do flex container</h2>
-        <p>Estas propriedades são aplicadas ao alimento que contém os itens.</p>
+        <p>Estas propriedades são aplicadas ao elemento que contém os itens.</p>
     </header>
-        
+
+    <!-- ===================================================
+     SEÇÃO: flex-direction
+     Define a direção do eixo pricipal e a ordem inicial dos itens
+     O id permite acessar esta seção de navegação. 
+    =================================================== -->
+    <section class="demo" id="flex-direction">
+        <!-- Agrupa o titulo da propriedade e o botão que restaura o valor inicial. -->
+         <div class="demo-heading">
+            <div>
+            <spam class="property-type">Flex Container</spam>
+            <h2>flex-direction</h2>
+            </div>
+            <button type="button" class="reset-button" data-reset-section="direction">Restaurar padrão</button>
+        </div>
+
+        <p class="demo-introduction">
+            Denife a direção do eixo principal e a ordem em que os itens são apresentados.
+        </p>
+ 
+        <!--
+        Grupo de botões co o valores da propriedade.
+        role="group" e arial-label ajudam leitores de tela.
+        data-*guada o valor que será lido pelo JavaScript.
+        aria-pressed informa qual botão está ativo. 
+        -->
+        <div class="button" role="group" aria-label="Valores de flex-direction">
+            <button type="button" data-direction="row" aria-pressed="true">row</button>
+            <button type="button" data-direction="row" aria-pressed="false">row-reverse</button>
+            <button type="button" data-direction="row" aria-pressed="false">column</button>
+            <button type="button" data-direction="row" aria-pressed="false">column-reverse</button>
+        </div>
     </main>
 
 </body>
