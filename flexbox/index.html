@@ -1,45 +1,46 @@
-<!--Define que o documento utiliza HTML5. Deve ser a primeira declaração do arquivo. -->
+<!-- Define que o documento utiliza HTML5. Deve ser a primeira declaração do arquivo -->
 <!DOCTYPE html>
-<!--A tag html envolve toda a pagina. lang="pt-BR" informa o idioma para navegadores e leitoresde tela. -->
+<!-- A tag html envolve toda a página. lang="pt-BR" informa o idioma para navegadores e leitores de tela. -->
 <html lang="pt-BR">
-    <!--O head guarda configurações e infomações que não aparecem dirertamenete no conteudo ví´sual. -->
+ 
+<!-- O head guarda configurações e informações que não aparecem diretamente no conteúdo visual. -->
 <head>
-    <!--Permite utilizar acentos, cedilha e outros caracteres especiais corretamente. --> 
+    <!-- Permite utilizar acentos, cedilha e outros caracteres especiais corretamente. -->
     <meta charset="UTF-8">
     <!-- Faz o layout respeitar a largura real de celulares, tablets e computadores. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Descrição usada por mecanimos de buscas e no conpar tilhamento do link. -->
-    <meta name="description" content="Laboratorio interativo para aprender e praticar as prinsipais propriedades do css flexbox.">
-    <!-- Texto exibido na aba do navegador-->
+    <!-- Descrição usada por mecanismos de busca e no compartilhamento do link. -->
+    <meta name="description" content="Laboratório interativo para aprender e praticar as principais propriedades do CSS flexbox.">
+    <!-- Texto exibido na aba do navegador -->
     <title>Laboratório Flexbox</title>
-    <!-- Comenta o HTML ao arquivo css responsavel pela aparencia da página. -->
+    <!-- Conecta o HTML ao arquivo CSS responsável pela aparência da página. -->
     <link rel="stylesheet" href="style/style.css">
 </head>
-
-<!--O body contém todo o conteúdo visivel da página-->
+ 
+<!-- O body contém todo o conteúdo visível da página. -->
 <body>
-    
-  <!-- ===================================================
+   
+    <!-- ===================================================
          CABEÇALHO PRINCIPAL
          Apresenta o nome e a proposta do laboratório.
-    =================================================== -->  
+    =================================================== -->
     <header class="page-header">
-        <!-- Pequeno rótulovisual acima do titulo principal. -->
+        <!-- Pequeno rótulo visual acima do título principal. -->
         <span class="page-label">Laboratório interativo</span>
         <!-- h1 é o título principal e deve represetar o assunto da página. -->
-        <h1>flexbox Playground</h1>
+        <h1>Flexbox Playground</h1>
         <p>
-            Clique nos valores, observe as mudanças e relacione cada resultadovisual
-            com o código CSS aplicado
+            Clique nos valores, observe as mudanças e relacione cada resultado visual
+            com o código CSS aplicado.
         </p>
     </header>
-
-     <!-- ===================================================
+ 
+    <!-- ===================================================
          NAVEGAÇÃO INTERNA
-         cada link para o id de uma seção de pagina.
-         aria-label descreve o menu para tecnologia assistivas.
-    =================================================== -->  
-
+         Cada link aponta para o id de uma seção da página.
+         aria-label descreve o menu para tecnologias assistivas.
+    =================================================== -->
+ 
     <nav class="property-navigation" aria-label="Navegação das propriedades do Flexbox">
         <a href="#flex-direction">flex-direction</a>
         <a href="#justify-content">justify-content</a>
@@ -47,101 +48,101 @@
         <a href="#gap">gap</a>
         <a href="#flex-wrap">flex-wrap</a>
         <a href="#flex-flow">flex-flow</a>
-        <a href="#aling-content">aling-content</a>
+        <a href="#align-content">align-content</a>
         <a href="#order">order</a>
         <a href="#flex-grow">flex-grow</a>
         <a href="#flex-shrink">flex-shrink</a>
         <a href="#flex-basis">flex-basis</a>
         <a href="#flex">flex</a>
-        <a href="#aling-self">aling-self</a>
+        <a href="#align-self">align-self</a>
         <a href="#desafio">desafio</a>
     </nav>
-
-    <!-- O main reúni o conteúdo principal do laboratório -->
+ 
+    <!-- O main reúne o conteúdo principal do laboratório -->
     <main>
         <!-- ===================================================
-        PARTE 1 — PROPRIEDADES DO FLEX CONTAITER
-        São aplicadas ao elimento pai, responsavel por organisar os itens 
-    =================================================== -->
-    <header class="group-header">
-        <span>Parte 1</span>
-        <h2>Propriedades do flex container</h2>
-        <p>Estas propriedades são aplicadas ao elemento que contém os itens.</p>
-    </header>
-
-    <!-- ===================================================
-     SEÇÃO: flex-direction
-     Define a direção do eixo pricipal e a ordem inicial dos itens
-     O id permite acessar esta seção de navegação. 
-    =================================================== -->
-    <section class="demo" id="flex-direction">
-        <!-- Agrupa o titulo da propriedade e o botão que restaura o valor inicial. -->
-         <div class="demo-heading">
-            <div>
-            <spam class="property-type">Flex Container</spam>
-            <h2>flex-direction</h2>
-            </div>
-            <button type="button" class="reset-button" data-reset-section="direction">Restaurar padrão</button>
-        </div>
-
-        <p class="demo-introduction">
-            Denife a direção do eixo principal e a ordem em que os itens são apresentados.
-        </p>
+             PARTE 1 — PROPRIEDADES DO FLEX CONTAINER
+             São aplicadas ao elemento pai, responsável por organizar os itens.
+        =================================================== -->
+        <header class="group-header">
+            <span>Parte 1</span>
+            <h2>Propriedades do Flex Container</h2>
+            <p>Estas propriedades são aplicadas ao elemento que contém os itens.</p>
+        </header>
  
-        <!--
-        Grupo de botões co o valores da propriedade.
-        role="group" e arial-label ajudam leitores de tela.
-        data-*guada o valor que será lido pelo JavaScript.
-        aria-pressed informa qual botão está ativo. 
-        -->
-        <div class="button" role="group" aria-label="Valores de flex-direction">
-            <button type="button" data-direction="row" aria-pressed="true">row</button>
-            <button type="button" data-direction="row" aria-pressed="false">row-reverse</button>
-            <button type="button" data-direction="row" aria-pressed="false">column</button>
-            <button type="button" data-direction="row" aria-pressed="false">column-reverse</button>
-        </div>
-
-        <!--
-        Descrição atualizada pelo JavaScript conforme o botão escolhido 
-        aria-live="politi" permite anunciar a mudança para leitores de tela. 
-        -->
-
-        <p class="property-description direction-description" aria="polite">
-            Organiza os itens horizontalmente, da esqueda para a direita.
-        </p>
-    </section>
-    <!--
-        Área visual da demonstração.
-        A class contaiter recebe display:flex no css.
-        A segunda classe identificar a propriedade demonstrada 
-        -->
-        <div class="container direction-container" id="direction-container">
-            <span class="container-label">Flex container</span>
-            <!-- Indicadores dos eixos; o JavaScript atauliza as setas nesta seção-->
-            <span class="axis axis-main direction-main axis">Eixo principal →</span>
-            <span class="axis axi-cross direction-cross-axis">Eixos secundario ↓</span> 
-            <!-- Cada ealemento ,item é um flex Item. Os números facilitam observar orden e exposição-->
-             <div><span class="item">1</span></div>
-             <div><span class="item">2</span></div>
-             <div><span class="item">3</span></div>
-             <div><span class="item">4</span></div>
-        </div>
-        
-        <!--
-            Mostra o CSS correspode ao valor selecionado.
-            pre preserva espaços e quebras de linha; code identificar códogo-fonte.
-            O botão usa data-copy-property e data-copy-target para copiar o resultado.
-        -->
-        <div class="code-wrapper">
-            <pre class="code"><code>.container {
-    diplay:flex;
-    flex-direction: <strong class="direction-value" aria-live="polite"></strong>;            
+        <!-- ===================================================
+             SEÇÃO: flex-direction
+             Define a direção do eixo principal e a ordem inicial dos itens.
+             O id permite acessar esta seção pelo menu de navegação.
+        =================================================== -->
+        <section class="demo" id="flex-direction">
+            <!-- Agrupa o título da propriedade e o botão que restaura o valor inicial. -->
+            <div class="demo-heading">
+                <div>
+                    <span class="property-type">Flex Container</span>
+                    <h2>flex-direction</h2>
+                </div>
+                <button type="button" class="reset-button" data-reset-section="direction">Restaurar padrão</button>
+            </div>
+ 
+            <p class="demo-introduction">
+                Define a direção do eixo principal e a ordem em que os itens são apresentados.
+            </p>
+ 
+            <!--
+                Grupo de botões com os valores da propriedade.
+                role="group" e aria-label ajudam leitores de tela.
+                data-* guarda o valor que será lido pelo JavaScript.
+                aria-pressed informa qual botão está ativo.
+            -->
+            <div class="buttons" role="group" aria-label="Valores de flex-direction">
+                <button type="button" data-direction="row" aria-pressed="true">row</button>
+                <button type="button" data-direction="row-reverse" aria-pressed="false">row-reverse</button>
+                <button type="button" data-direction="column" aria-pressed="false">column</button>
+                <button type="button" data-direction="column-reverse" aria-pressed="false">column-reverse</button>
+            </div>
+ 
+            <!--
+                Descrição atualizada pelo JavaScript conforme o botão escolhido.
+                aria-live="polite" permite anunciar a mudança para leitores de tela.
+            -->
+            <p class="property-description direction-description" aria-live="polite">
+                Organiza os itens horizontalmente, da esquerda para a direita.
+            </p>
+ 
+            <!--
+                Área visual da demonstração.
+                A classe container recebe display:flex no CSS.
+                A segunda classe identifica a propriedade demonstrada.
+            -->
+            <div class="container direction-container" id="direction-container">
+                <span class="container-label">flex container</span>
+                <!-- Indicadores dos eixos; o JavaScript atualiza as setas nesta seção. -->
+                <span class="axis axis-main direction-main-axis">Eixo principal →</span>
+                <span class="axis axis-cross direction-cross-axis">Eixo secundário ↓</span>
+                <!-- Cada elemento .item é um flex Item. Os números facilitam observar ordem e posição. -->
+                <div><span class="item">1</span></div>
+                <div><span class="item">2</span></div>
+                <div><span class="item">3</span></div>
+                <div><span class="item">4</span></div>
+            </div>
+ 
+            <!--
+                Mostra o CSS correspondente ao valor selecionado.
+                <pre> preserva espaços e quebras de linha; <code> identifica código-fonte.
+                O botão usa data-copy-property e data-copy-target para copiar o resultado.
+            -->
+            <div class="code-wrapper">
+                <pre class="code"><code>.container {
+    display:flex;
+    flex-direction: <strong class="direction-value" aria-live="polite"></strong>;                    
 }</code></pre>
-
-                <button type="button" class="copy-button" data-copy-proérty="flex-direction"
-                data-copy-target=".direction-value">Copiar CSS</button>
-        </div>    
-        </main>
-
+                <button type="button" class="copy-button" data-copy-property="flex-direction"
+                    data-copy-target=".direction-value">Copiar CSS</button>
+            </div>
+        </section>
+ 
+    </main>
+ 
 </body>
-</html>
+</html>-->>
